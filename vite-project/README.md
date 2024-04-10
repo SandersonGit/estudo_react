@@ -43,3 +43,71 @@ No exemplo acima, estamos utilizando JSX para criar dois componentes: `Greeting`
 #### Conclusão
 
 O JSX é uma ferramenta poderosa no arsenal de um desenvolvedor React, permitindo a criação de interfaces de usuário de forma simples e eficiente. Ao compreender o JSX e suas nuances, você estará melhor preparado para criar aplicativos React dinâmicos e responsivos.
+
+### Capítulo 2: Importação e Exportação em React
+
+Neste capítulo, vamos explorar a dinâmica de importação e exportação em React, que é fundamental para organizar e reutilizar código em seus projetos. Veremos como importar e exportar componentes, módulos e bibliotecas em um projeto React.
+
+#### Importação e Exportação de Componentes
+
+Em React, os componentes são frequentemente importados e exportados entre diferentes arquivos para facilitar a reutilização e modularidade do código. Vamos ver como isso é feito:
+
+##### Exportação de um Componente:
+
+```javascript
+// Button.js
+import React from 'react';
+
+function Button() {
+  return <button>Clique Aqui</button>;
+}
+
+export default Button;
+```
+
+##### Importação de um Componente:
+
+```javascript
+// App.js
+import React from 'react';
+import Button from './Button';
+
+function App() {
+  return (
+    <div>
+      <Button />
+    </div>
+  );
+}
+
+export default App;
+```
+
+#### Estruturação de Projetos em React
+
+Organizar seus arquivos de forma eficiente é crucial para manter um projeto React limpo e gerenciável. Aqui está uma estrutura de pastas comum para um projeto React:
+
+```
+meu-projeto/
+  src/
+    components/
+      Button.js
+      Input.js
+    pages/
+      HomePage.js
+      AboutPage.js
+    App.js
+    index.js
+  public/
+    index.html
+```
+
+Nesta estrutura, os componentes são organizados na pasta `components`, as páginas na pasta `pages` e o ponto de entrada do aplicativo é o arquivo `App.js`.
+
+#### Prática de Estruturação de Projetos
+
+Ao iniciar um novo projeto React, pense cuidadosamente sobre como estruturá-lo para garantir uma organização eficiente. Divida seu código em componentes reutilizáveis e mantenha uma hierarquia clara de pastas e arquivos.
+
+#### Conclusão
+
+A dinâmica de importação e exportação em React é uma parte fundamental do desenvolvimento de aplicativos. Ao entender como importar e exportar componentes, e ao praticar a estruturação de projetos React, você estará no caminho certo para criar aplicativos React bem organizados e modulares.
